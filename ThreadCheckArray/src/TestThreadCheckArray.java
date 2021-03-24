@@ -8,6 +8,7 @@ public class TestThreadCheckArray {
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
 			int val;
+			int x = 5;
 			//int [] array = new int[num];
 			ArrayList<Integer> array = new ArrayList<Integer>();
 			System.out.println("Enter numbers for array");
