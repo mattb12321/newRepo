@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * Class ThreadCheckArray
+ * Defines the run method for the threads from TestThreadCheckArray
+ * Performs the calculations required for reaching our required results
+ */
 public class ThreadCheckArray implements Runnable 
 {
 	private boolean flag;
@@ -9,6 +14,11 @@ public class ThreadCheckArray implements Runnable
 	//int[] array;
 	int b;
 	
+	/**
+	 * Constructor
+	 * Has synchronized on sd so that only one thread can access this information at a time
+	 * @param sd
+	 */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -21,6 +31,13 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.size()];
 	}
 	
+	/**
+	 * A recursive function
+	 * Checks the array from the end to the beginning
+	 * Stop condition is when array size is equal to 1 
+	 * @param n
+	 * @param b
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -57,6 +74,9 @@ public class ThreadCheckArray implements Runnable
 		rec(n-1, b);
 	}
 
+	/**
+	 *A run function for the threads that are run from the main method 
+	 */
 	public void run() {
 		//if (array.length != 1)
 		if (array.size() != 1)

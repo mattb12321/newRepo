@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Class TestThreadCheckArray runs the main method that gets all user input and runs the
+ * strings that perform the calculations
+ */
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
@@ -8,7 +12,6 @@ public class TestThreadCheckArray {
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
 			int val;
-			int x = 589;
 			//int [] array = new int[num];
 			ArrayList<Integer> array = new ArrayList<Integer>();
 			System.out.println("Enter numbers for array");
